@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE facelet-taglib PUBLIC
+  "-//Sun Microsystems, Inc.//DTD Facelet Taglib 1.0//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+
+<facelet-taglib>
+	<namespace>http://code.google.com/p/jsf-component</namespace>
+    <tag>
+        <tag-name>selectManyControl</tag-name>
+        <component>
+            <component-type>org.jsfcomponent.UISelectManyControl</component-type>
+        </component>
+    </tag>
+</facelet-taglib>
