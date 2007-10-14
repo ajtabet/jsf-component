@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:jsfcomp="http://code.google.com/p/jsf-component">
+
+   		<ui:composition template="/templates/common.xhtml">
+						
+			<ui:define name="pageTitle">SelectManyControl Demo</ui:define>
+  
+			<ui:define name="pageHeader">SelectManyControl Demo</ui:define>
+
+			<ui:define name="body">
+			    <style>
+			        .SelectManyControl_fieldset {
+			            border: solid 1px;
+			        }
+
+                    .SelectManyControl_legend {
+                        font-weight : bold;
+                    }			        
+			    </style>
+
+				<h:form>
+				    <jsfcomp:selectManyControl value="#{modelBean.selectedValues}"
+			                leftListTitle="Available items"
+			                rightListTitle="Selected items"
+				            fieldsetStyleClass="SelectManyControl_fieldset"
+				            legendStyleClass="SelectManyControl_legend">
+				        <f:selectItems value="#{modelBean.items}"/>
+				    </jsfcomp:selectManyControl>
+					<h:commandButton action="action" value="submit"/>
+					<h:panelGrid columns="2">
+					   <h:outputText value="Selected values:"/>
+					   <h:outputText value="#{modelBean.selectedValues}"/>
+					</h:panelGrid>
+				</h:form>
+			</ui:define>
+		</ui:composition>
+</html>
