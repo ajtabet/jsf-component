@@ -42,7 +42,7 @@
 </table>
 <script type="text/javascript">
 //<![CDATA[
-	document.getElementById("$clientId").valuesArray = new Array($valuesArrayString);
+	document.getElementById("$clientId").valuesArray = [$valuesArrayString];
 
 	document.getElementById("$clientId").fAdd = function() {
 		var leftList = document.getElementById("$clientId:leftList");
